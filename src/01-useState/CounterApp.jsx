@@ -26,8 +26,6 @@ export const CounterApp = () => {
                 () => setCounter({
                     ...counter, // spread operator
                     counter1: counter1+1,
-
-
                 })
             }>+1</button>
 
