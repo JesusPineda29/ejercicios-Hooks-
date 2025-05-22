@@ -4,10 +4,20 @@ export const Message = () => {
 
 
     useEffect(() => {
-      console.log('Message component mounted');
+
+        const onMouseMove = ({x,y}) => {
+            const coords = {x,y};
+            console.log(coords);
+        }
+
+        window.addEventListener('mousemove', onMouseMove);
     
       return () => {
-        console.log('Message component unmounted');
+
+        window.removeEventListener('mousemove', onMouseMove);
+        console.log('Se ha desmontado el componente');
+
+
       }
     }, [])
     
