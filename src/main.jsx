@@ -14,8 +14,11 @@ import './index.css'
 //import { MemoHook } from './06-memos/MemorizeHook'
 import { CallbackHook } from './06-memos/CallbackHook'
 
+import './08-useReducer/intro-reducer'
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <CallbackHook  />
+    
   </StrictMode>,
 )
