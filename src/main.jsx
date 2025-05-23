@@ -12,13 +12,13 @@ import './index.css'
 //import { Layout } from './05-useLayoutEffect/Layout'
 //import { Memorize } from './06-memos/Memorize'
 //import { MemoHook } from './06-memos/MemorizeHook'
-import { CallbackHook } from './06-memos/CallbackHook'
+//import { CallbackHook } from './06-memos/CallbackHook'
 
-import './08-useReducer/intro-reducer'
+// claude
+import { CounterApp } from './cloude/contadorUseReducer'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <CallbackHook  />
-    
+    <CounterApp  />
   </StrictMode>,
 )
