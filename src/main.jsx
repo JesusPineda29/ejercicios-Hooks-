@@ -19,6 +19,7 @@ import { CounterApp } from './ejemplos-c-useReducer/CounterApp'
 import FormApp from './ejemplos-c-useReducer/FormApp'
 import ListaTareas from './ejemplos-c-useReducer/ListaTareas'
 import CarritoCompras from './ejemplos-c-useReducer/CarritoCompras'
+import MusicPlayer from './ejemplos-c-useReducer/MusicPlayer'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -26,5 +27,6 @@ createRoot(document.getElementById('root')).render(
     <FormApp />
     <ListaTareas />
     <CarritoCompras />
+    <MusicPlayer />
   </StrictMode>,
 )

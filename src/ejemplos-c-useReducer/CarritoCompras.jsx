@@ -55,6 +55,8 @@ function reducerCarrito(estado, accion) {
         total: nuevoTotal
       };
 
+
+
     case 'QUITAR_PRODUCTO':
       // Encontrar el producto y reducir su cantidad
       const productosActualizados = estado.productos.map(item => {
@@ -79,6 +81,8 @@ function reducerCarrito(estado, accion) {
         total: totalActualizado
       };
 
+
+
     case 'ELIMINAR_PRODUCTO_COMPLETO':
       // Eliminar completamente un producto del carrito
       const productosFiltrados = estado.productos.filter(
@@ -95,6 +99,8 @@ function reducerCarrito(estado, accion) {
         total: totalFiltrado
       };
 
+
+
     case 'APLICAR_DESCUENTO':
       // Aplicar descuento del 10%
       return {
@@ -103,6 +109,8 @@ function reducerCarrito(estado, accion) {
         porcentajeDescuento: 10
       };
 
+
+
     case 'QUITAR_DESCUENTO':
       // Quitar descuento
       return {
@@ -110,6 +118,8 @@ function reducerCarrito(estado, accion) {
         descuentoAplicado: false,
         porcentajeDescuento: 0
       };
+
+
 
     case 'VACIAR_CARRITO':
       // Volver al estado inicial
@@ -136,7 +146,7 @@ export default function CarritoCompras() {
   );
 
   return (
-    <div className="p-6 max-w-4xl mx-auto bg-white rounded-lg shadow-lg">
+    <div className="p-6 max-w-4xl mx-auto bg-white rounded-lg shadow-lg mb-6">
       {/* Título */}
       <h1 className="text-3xl font-bold text-center mb-8 text-purple-700">
         🛒 Mi Carrito de Compras
