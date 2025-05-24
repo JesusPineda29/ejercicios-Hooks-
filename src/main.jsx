@@ -15,10 +15,14 @@ import './index.css'
 //import { CallbackHook } from './06-memos/CallbackHook'
 
 // claude
-import { CounterApp } from './cloude/contadorUseReducer'
+import { CounterApp } from './cloude/CounterApp'
+import FormApp from './cloude/FormApp'
+import ListaTareas from './cloude/ListaTareas'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <CounterApp  />
+    <FormApp />
+    <ListaTareas />
   </StrictMode>,
 )

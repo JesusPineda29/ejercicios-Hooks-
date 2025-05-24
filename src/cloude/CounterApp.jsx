@@ -1,31 +1,54 @@
-
-import React, { useReducer } from 'react';
+import { useReducer } from 'react';
 
 // 1. Definir el estado inicial
 const initialState = { count: 0 };
 
-// 2. Definir el reducer
-function counterReducer(state, action) {
-  switch (action.type) {
+
+
+// 2. Definir la función reducer
+// El reducer recibe el estado actual y una acción, y devuelve un nuevo estado
+function counterReducer(state, action) { // Acción - es un objeto que describe qué cambio quieres hacer
+   
+  switch (action.type) { 
     case 'INCREMENT':
+      // Si la acción es 'INCREMENT', incrementa el contador en 1
       return { count: state.count + 1 };
+
     case 'DECREMENT':
+      // Si la acción es 'DECREMENT', disminuye el contador en 1
       return { count: state.count - 1 };
     case 'RESET':
+      // Si la acción es 'RESET', reinicia el contador a 0
       return { count: 0 };
     case 'SET_VALUE':
+      // Si la acción es 'SET_VALUE', establece el contador al valor recibido
       return { count: action.value };
     default:
+      // Si no se reconoce el tipo de acción, lanza un error
       throw new Error(`Acción no reconocida: ${action.type}`);
   }
 }
 
-export const CounterApp=() => {
+
+
+
+
+// Componente principal
+export const CounterApp = () => {
   // 3. Usar useReducer
+  
+  // useReducer recibe:
+  //   - reducer que es una función que determina cómo cambiar el estado, función que recibe el estado actual y una acción, y devuelve el nuevo estado
+  //   - el estado inicial
+  // Devuelve:
+  //   - state: el estado actual
+  //   - dispatch: una función para enviar acciones al reducer
   const [state, dispatch] = useReducer(counterReducer, initialState);
 
+
+
   return (
-    <div className="p-6 max-w-md mx-auto bg-white rounded-lg shadow-lg">
+    <div className="p-6 max-w-md mx-auto bg-white rounded-lg shadow-lg mb-10 mt-10">
       <h2 className="text-2xl font-bold mb-4 text-center">Contador con useReducer</h2>
       
       <div className="text-center mb-6">
