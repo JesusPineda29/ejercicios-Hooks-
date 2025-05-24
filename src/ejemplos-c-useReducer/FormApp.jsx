@@ -135,6 +135,7 @@ export default function FormApp() {
     //   - dispatch: una función para enviar acciones al reducer
     const [state, dispatch] = useReducer(formReducer, initialState);
 
+    
 
     // Función para manejar cambios en los campos
     const handleFieldChange = (field, value) => {
